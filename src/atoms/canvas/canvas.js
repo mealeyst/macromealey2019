@@ -18,7 +18,7 @@ class BaseCanvas extends Component {
     const base_image = new Image();
     base_image.src = 'https://res.cloudinary.com/dp5su6sfg/image/upload/v1506995998/web/engagement_photos_09_30_17-97_o7jn3y.jpg'
     base_image.onload = () => {
-      console.log(base_image.width, base_image.height)
+      console.log({image: {width: base_image.width, height: base_image.height},canvas: {width: this.canvas.current.width, height: this.canvas.current.height}})
       ctx.drawImage(base_image, 0, 0, this.canvas.current.width, this.canvas.current.height)
     }
   }

@@ -1,6 +1,9 @@
 import { createGlobalStyle, css } from 'styled-components'
 import { default as colors } from './colors'
 import { default as fonts } from './typography'
+import breakpoints from './mediaQueries'
+import fontSize from './fontSizes'
+import fontStyle from './fontStyles'
 
 import RalewayBold from './Raleway/Raleway-Bold.ttf'
 import RalewayBoldItalic from './Raleway/Raleway-BoldItalic.ttf'
@@ -54,10 +57,13 @@ const buildFontFaces = () => {
   })
 }
 
-
+console.log(typeof fontStyle())
 export default {
   colors: colors,
-  fonts: fonts
+  fonts: fonts,
+  fontSize: fontSize,
+  fontStyle: fontStyle,
+  breakpoints: breakpoints
 }
 
 const MacroGlobalStyles = createGlobalStyle`
@@ -66,6 +72,9 @@ const MacroGlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     color: ${colors.black};
     ${fonts.robotoSlab}
+  }
+  html {
+    font-size: 10px;
   }
   body {
     margin: 0;

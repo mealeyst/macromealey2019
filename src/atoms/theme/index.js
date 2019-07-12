@@ -19,4 +19,4 @@ MacroTheme.propTypes = {
 }
 
 export default MacroTheme
-export { MacroGlobalStyles }
+export { MacroGlobalStyles, theme }

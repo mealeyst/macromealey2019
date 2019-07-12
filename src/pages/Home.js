@@ -9,7 +9,7 @@ const Home = styled((props) => {
   console.log(props)
   return (
     <section>
-      <Canvas />
+      
     </section>
   )
 })`
