@@ -4,6 +4,7 @@ import { default as fonts } from './typography'
 import breakpoints from './mediaQueries'
 import fontSize from './fontSizes'
 import fontStyle from './fontStyles'
+import fontWeight from './fontWeight'
 
 import RalewayBold from './Raleway/Raleway-Bold.ttf'
 import RalewayBoldItalic from './Raleway/Raleway-BoldItalic.ttf'
@@ -63,6 +64,7 @@ export default {
   fonts: fonts,
   fontSize: fontSize,
   fontStyle: fontStyle,
+  fontWeight: fontWeight,
   breakpoints: breakpoints
 }
 

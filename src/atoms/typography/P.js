@@ -10,7 +10,7 @@ const P = styled.p`
   ${props => props.theme.breakpoints.aboveLaptop`
     ${props => props.fontSizes.desktop}
   `}
-  font-weight: ${props => props.weight};
+  ${props => props.fontWeight};
 `
 
 P.propTypes = {
@@ -21,7 +21,7 @@ P.propTypes = {
     desktop: PropTypes.array
   }),
   fontStyle: PropTypes.array,
-  weight: PropTypes.number
+  fontWeight: PropTypes.number
 }
 
 P.defaultProps = {
@@ -32,7 +32,7 @@ P.defaultProps = {
     desktop: theme.fontSize('16px')
   },
   fontStyle: theme.fontStyle(),
-  weight: 400
+  fontWeight: theme.fontWeight()
 }
 
 /** @component */

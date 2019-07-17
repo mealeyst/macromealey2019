@@ -10,7 +10,7 @@ const H2 = styled.h2`
   ${props => props.theme.breakpoints.aboveLaptop`
     ${props => props.fontSizes.desktop}
   `}
-  font-weight: ${props => props.weight};
+  ${props => props.fontWeight};
 `
 
 H2.propTypes = {
@@ -21,7 +21,7 @@ H2.propTypes = {
     desktop: PropTypes.array
   }),
   fontStyle: PropTypes.array,
-  weight: PropTypes.number
+  fontWeight: PropTypes.array
 }
 
 H2.defaultProps = {
@@ -32,7 +32,7 @@ H2.defaultProps = {
     desktop: theme.fontSize('24px')
   },
   fontStyle: theme.fontStyle(),
-  weight: 500
+  fontWeight: theme.fontWeight('bold')
 }
 
 /** @component */
